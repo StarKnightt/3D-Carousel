@@ -1,3 +1,5 @@
+// I'll be making clean code later
+
 import { useEffect } from 'react';
 import Head from 'next/head';
 import Music from '@/components/Music';
