@@ -1,40 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 3D Carousel Gallery
+
+A beautiful and interactive 3D carousel gallery built with Next.js, featuring image and video support with an integrated music player.
+
+## Features
+
+- 🎠 Smooth 3D carousel animation
+- 🖼️ Support for images and videos
+- 🎵 Integrated SoundCloud music player
+- 🎮 Interactive controls (drag, zoom, auto-rotate)
+- 📱 Fully responsive design
+- 🎨 Beautiful hover effects and transitions
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 16.x or later
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd carousel-app
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Usage
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### Adding Media
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+To add new images or videos to the carousel, modify the `pages/index.js` file:
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```jsx
+<div id="spin-container">
+  <img src="your-image-url.jpg" alt="description" />
+  <video controls autoPlay loop>
+    <source src="your-video-url.mp4" type="video/mp4" />
+  </video>
+</div>
+```
 
-## Learn More
+### Customization
 
-To learn more about Next.js, take a look at the following resources:
+You can customize various aspects of the carousel by modifying the following variables in `pages/index.js`:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+```javascript
+var radius = 240; // Distance of items from center
+var autoRotate = true; // Enable/disable auto-rotation
+var rotateSpeed = -60; // Rotation speed (negative for clockwise)
+var imgWidth = 120; // Width of items
+var imgHeight = 170; // Height of items
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Controls
 
-## Deploy on Vercel
+- **Drag**: Click and drag to rotate the carousel
+- **Scroll**: Use mouse wheel to zoom in/out
+- **Auto-rotate**: Carousel automatically rotates (can be disabled)
+- **Music**: Control music playback using the top bar player
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Built With
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+- [Next.js](https://nextjs.org/) - React framework
+- [SoundCloud Widget API](https://developers.soundcloud.com/docs/api/html5-widget) - Music integration
+- CSS3 3D Transforms
+- Modern JavaScript
+
+## Browser Support
+
+- Chrome (recommended)
+- Firefox
+- Safari
+- Edge
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgments
+
+- Inspired by modern 3D carousel implementations
+- SoundCloud for music integration capabilities
+- Next.js team for the amazing framework

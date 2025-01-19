@@ -146,6 +146,15 @@ return (
         </div>
         <div id="ground"></div>
       </div>
+      
+      <a 
+        href="https://github.com/StarKnightt/3D-Carousel" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="github-button"
+      >
+        Star on GitHub ⭐
+      </a>
     </main>
 
     <style jsx global>{`
@@ -333,6 +342,39 @@ return (
         background-color: rgba(255, 255, 255, 0.1);
         border-radius: 25px;
         height: 4px;
+      }
+
+      .github-button {
+        position: fixed;
+        bottom: 30px;
+        padding: 12px 30px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        z-index: 1000;
+      }
+
+      .github-button:hover {
+        background: rgba(255, 255, 255, 0.15);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .github-button:active {
+        transform: translateY(0);
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       }
     `}</style>
   </>
