@@ -15,7 +15,7 @@ A beautiful and interactive 3D carousel gallery built with Next.js, featuring im
 
 ### Prerequisites
 
-- Node.js 16.x or later
+- Node.js 15.x or later
 - npm or yarn package manager
 
 ### Installation
