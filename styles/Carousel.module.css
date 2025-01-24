@@ -86,8 +86,11 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: auto;
+  width: 100%;
   height: auto;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes spin {

@@ -1,5 +1,6 @@
 // components/Music.js
 import { useState, useEffect, useRef } from 'react';
+import styles from '@/styles/Carousel.module.css';
 
 const Music = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -59,7 +60,6 @@ const Music = () => {
     initializeWidget();
 
     return () => {
-      // Cleanup
       if (widgetRef.current) {
         widgetRef.current.unbind(SC.Widget.Events.READY);
         widgetRef.current.unbind(SC.Widget.Events.PLAY);
@@ -115,8 +115,12 @@ const Music = () => {
       <iframe
         ref={playerRef}
         id="soundcloud-player"
-        src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F1312206532&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"
+        width="100%"
+        height="166"
+        scrolling="no"
+        frameBorder="no"
         allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1763465181&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"
       />
       <style jsx>{`
         .music-player {
